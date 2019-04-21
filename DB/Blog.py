@@ -16,7 +16,6 @@ class Blog(db.Model):
     def getContent(self):
         return self.content
 
-
-if __name__ == "__main__":
-    sampleBlog = Blog()
-    print(str(sampleBlog))
+# if __name__ == "__main__":
+#     sampleBlog = Blog()
+#     print(str(sampleBlog))
