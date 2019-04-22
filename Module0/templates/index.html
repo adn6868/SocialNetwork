@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">    
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
     <head>
         <title> Sign in </title>
     </head>
     <body>
-    <form>
-    Log in ID:<br>
-    <input type="text" name="id"><br>
-    Password:<br>
-    <input type="text" name="password"> 
-    <br>
-    <input type="submit" value="Submit">
-    </form>
+    <div class="fb-login-button" data-width="140" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"><br></fb:login-button><br><div id="status"><br></div>
+    <p>---</p>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <script>
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        var id_token = googleUser.getAuthResponse().id_token;
+        var name = profile.getName();
+        var ImageURL = profile.getImageUrl();
+        var Email = profile.getEmail(); // This is null if the 'email' scope is not present.
+    }
+    </script>
     </body>
 
 </html>
