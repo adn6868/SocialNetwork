@@ -1,5 +1,11 @@
 # Social Media page
 ## usage:
+
+Under terminal: run:
+python app.py
+
+Navigate to "http://127.0.0.1:8080/" on your web-browser
+
 All respond will be 
 ```json
 {
