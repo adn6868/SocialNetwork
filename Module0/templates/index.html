@@ -9,18 +9,25 @@
     </head>
     <body>
     <div class="fb-login-button" data-width="140" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
-    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"><br></fb:login-button><br><div id="status"><br></div>
-    <p>---</p>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <fb:login-button scope="public_profile,email" onlogin="f-onSignIn();"><br></fb:login-button><br><div id="status"><br></div>
     <script>
-    function onSignIn(googleUser) {
+    function f-onSignIn(){
+
+    }
+    </script>
+
+    <p>---</p>
+    <div class="g-signin2" data-onsuccess="g-onSignIn"></div>
+    <script>
+    function g-onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
         var id_token = googleUser.getAuthResponse().id_token;
         var name = profile.getName();
         var ImageURL = profile.getImageUrl();
-        var Email = profile.getEmail(); // This is null if the 'email' scope is not present.
+        var Email = profile.getEmail(); 
     }
     </script>
+
     </body>
 
 </html>
