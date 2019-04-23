@@ -16,6 +16,7 @@
     }
     </script>
 
+<p> Sign in to add user:</p>
     <p>---</p>
     <div class="g-signin2" data-onsuccess="g-onSignIn"></div>
     <script>
@@ -27,7 +28,9 @@
         var Email = profile.getEmail(); 
     }
     </script>
-
+    <form action="http://127.0.0.1:8080/users">
+        <input type="submit" value="Views Users List" />
+    </form>
     </body>
 
 </html>
