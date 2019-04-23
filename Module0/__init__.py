@@ -70,15 +70,14 @@ class User(Resource):
         shelf = getDB()
 
         if not (id in shelf):
-            return {'message': 'Device not found', 'data': {}}, 404
-
-        return {'message': 'Device found', 'data': shelf[id]}, 200
+            return {'message': 'User not found', 'data': {}}, 404
+        return {'message': 'User found', 'data': shelf[id]}, 200
 
     def delete(self, id):
         shelf = getDB()
 
         if not (id in shelf):
-            return {'message': 'Device not found', 'data': {}}, 404
+            return {'message': 'User not found', 'data': {}}, 404
 
         del shelf[id]
         return '', 204
