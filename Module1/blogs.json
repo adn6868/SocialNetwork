@@ -1,0 +1,9 @@
+// sample blog database (not gonna be used)
+{
+    "bogs" :{
+        "title":"First Blog",
+        "author": "Anh Nguyen",
+        "content":"It culminated when Collin Winter, 14, an eighth grader in McPherson, Kan., joined a classroom walkout in January. In the nearby town of Wellington, high schoolers staged a sit-in. Their parents organized in living rooms, at churches and in the back of machine repair shops. They showed up en masse to school board meetings. In neighborhoods with no political yard signs, homemade signs with dark red slash marks suddenly popped up.
+        Silicon Valley had come to small-town Kansas schools — and it was not going well."
+    }
+}
